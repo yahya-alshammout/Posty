@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Post | Posty</title>
+     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Posty</h1>
+    </header>
+
+    <main id="add-section">
+        <h2>Edit Post</h2>
+
+        <form action="{{ url_for('post_update', id = post.id) }}" method="POST">
+
+            <div>
+                <label>Photo URL:</label>
+                <input type="text" name="photo_url" />
+            </div>
+
+            <div>
+                <label>Name:</label>
+                <input type="text" name="name" />
+            </div>
+
+            <div>
+                <label>Body:</label>
+                <textarea name="body" cols="40" rows="5"></textarea>
+            </div>
+
+            <div>
+                <button>save</button>
+            </div>
+
+        </form>
+    </main>
+
+
+</body>
+
+</html>
